@@ -31,7 +31,7 @@ require(objectFiles, function () {
         ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}],
         ["EnemyToKill", {x: 500, y: 910, asset: "enemies/red_car.png"}],
         ["EnemyToKillFast", {x: 900, y: 910, asset: "enemies/red_car.png"}],
-        ["Badge", {x: 450, y: 1800, asset: "badge.png"}],
+//        ["Badge", {x: 450, y: 1800, asset: "badge.png"}],
         ["Recommendation", {x: 1100, y: 1600, asset: "gold_star.png"}],
         ["Coffee", {x: 1260, y: 1190, asset: "coffee.png"}],
         ["EndGame", {x: 100, y: 300, asset: "7thfloor-door.png"}]
@@ -94,7 +94,7 @@ require(objectFiles, function () {
             y: 0,
             x: 0
         }, function() {
-            window.location = 'endpage.html';
+            window.location = '';
         }), container);
 
         container.fit(60,60);
