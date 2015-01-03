@@ -34,7 +34,7 @@ require(objectFiles, function () {
 //        ["Badge", {x: 450, y: 1800, asset: "badge.png"}], //todo get rid of or assimilate functionality
         ["Recommendation", {x: 1100, y: 1600, asset: "key.png"}], //todo star and badge one collectable, change name 'reccomendation'
         ["Coffee", {x: 1260, y: 1190, asset: "key.png"}], //todo star and badge one collectable
-        ["EndGame", {x: 100, y: 300, asset: "7thfloor-door.png"}]
+        ["EndGame", {x: 70, y: 70, asset: "exit.png"}]
     ];
 
     Q.scene("firstStreet",function(stage) {
@@ -150,7 +150,7 @@ require(objectFiles, function () {
         }, 1000 );
     });
 
-    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/slider.png, badge.png, key.png, 7thfloor-door.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
+    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/slider.png, badge.png, key.png, exit.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
         Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});
         Q.stageScene("firstStreet");
         Q.stageScene("gameStats",1);
