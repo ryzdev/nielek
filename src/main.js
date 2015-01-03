@@ -26,8 +26,8 @@ require(objectFiles, function () {
     var enemyAssets = [
         ["EnemyToAvoid", {x: 1000, y: 2050, asset: "enemies/walker.png"}],
         ["EnemyToAvoid", {x: 500, y: 2050, asset: "enemies/walker.png"}],
-        ["BadgeGuard", {x: 350, y: 1800, asset: "enemies/walker.png"}],
-        ["VerticalEnemyToAvoid", {x: 700, y: 1950, asset: "enemies/flyer.png"}],
+        ["BadgeGuard", {x: 600, y: 1800, asset: "enemies/walker.png"}],
+        ["VerticalEnemyToAvoid", {x: 800, y: 1950, asset: "enemies/flyer.png"}],
         ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}],
         ["EnemyToKill", {x: 500, y: 910, asset: "enemies/red_car.png"}],
         ["EnemyToKillFast", {x: 900, y: 910, asset: "enemies/red_car.png"}],
