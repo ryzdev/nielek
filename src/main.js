@@ -31,9 +31,9 @@ require(objectFiles, function () {
         ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}],
         ["EnemyToKill", {x: 500, y: 910, asset: "enemies/red_car.png"}],
         ["EnemyToKillFast", {x: 900, y: 910, asset: "enemies/red_car.png"}],
-//        ["Badge", {x: 450, y: 1800, asset: "badge.png"}],
-        ["Recommendation", {x: 1100, y: 1600, asset: "gold_star.png"}],
-        ["Coffee", {x: 1260, y: 1190, asset: "coffee.png"}],
+//        ["Badge", {x: 450, y: 1800, asset: "badge.png"}], //todo get rid of or assimilate functionality
+        ["Recommendation", {x: 1100, y: 1600, asset: "key.png"}], //todo star and badge one collectable, change name 'reccomendation'
+        ["Coffee", {x: 1260, y: 1190, asset: "key.png"}], //todo star and badge one collectable
         ["EndGame", {x: 100, y: 300, asset: "7thfloor-door.png"}]
     ];
 
@@ -138,7 +138,7 @@ require(objectFiles, function () {
             }),statsContainer);
 
         var recs = stage.insert(new Q.UI.Text({
-                label: "Recommendations: " + Q.state.p.recommendations,
+                label: "Keys: " + Q.state.p.recommendations,
                 color: "white",
                 x: -300,
                 y: 0
@@ -150,7 +150,7 @@ require(objectFiles, function () {
         }, 1000 );
     });
 
-    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/slider.png, badge.png, gold_star.png, coffee.png, 7thfloor-door.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
+    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/slider.png, badge.png, key.png, 7thfloor-door.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
         Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});
         Q.stageScene("firstStreet");
         Q.stageScene("gameStats",1);
@@ -181,6 +181,6 @@ require(objectFiles, function () {
 
     Q.state.on("change.recommendations", function() {
         var info_label = Q("UI.Text", 1).at(3);
-        info_label.p.label = "Recommendations: "+ Q.state.p.recommendations;
+        info_label.p.label = "Keys: "+ Q.state.p.recommendations;
     });
 });
