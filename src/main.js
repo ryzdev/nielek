@@ -150,7 +150,7 @@ require(objectFiles, function () {
         }, 1000 );
     });
 
-    Q.load("tiles_map.png, autobot.png, firstStreet.tmx, enemies/security-guard.png, enemies/bodyguard.png, enemies/wheel.png, badge.png, gold_star.png, coffee.png, 7thfloor-door.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
+    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/security-guard.png, enemies/bodyguard.png, enemies/wheel.png, badge.png, gold_star.png, coffee.png, 7thfloor-door.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
         Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});
         Q.stageScene("firstStreet");
         Q.stageScene("gameStats",1);
