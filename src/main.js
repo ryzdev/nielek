@@ -64,7 +64,7 @@ require(objectFiles, function () {
         }));
 
         stage.insert(new Q.UI.Button({
-            label: "You're still fired you only scored " + Q.state.p.score + "! Click to play again",
+            label: "You lose!! Your score is " + Q.state.p.score + "! Click to play again",
             color: 'white',
             y: 0,
             x: 0
@@ -89,7 +89,7 @@ require(objectFiles, function () {
         }));
 
         stage.insert(new Q.UI.Button({
-            label: "Congratulations! You're hired again!!!!!! You scored " + Q.state.p.score,
+            label: "You win!!! You scored " + Q.state.p.score,
             color: 'yellow',
             y: 0,
             x: 0
