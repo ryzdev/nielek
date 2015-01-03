@@ -27,8 +27,8 @@ require(objectFiles, function () {
         ["EnemyToAvoid", {x: 1000, y: 2050, asset: "enemies/walker.png"}],
         ["EnemyToAvoid", {x: 500, y: 2050, asset: "enemies/walker.png"}],
         ["BadgeGuard", {x: 350, y: 1800, asset: "enemies/walker.png"}],
-        ["VerticalEnemyToAvoid", {x: 700, y: 1950, asset: "enemies/bodyguard.png"}],
-        ["EnemyToKill", {x: 280, y: 910, asset: "enemies/wheel.png"}],
+        ["VerticalEnemyToAvoid", {x: 700, y: 1950, asset: "enemies/flyer.png"}],
+        ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}],
         ["EnemyToKill", {x: 500, y: 910, asset: "enemies/red_car.png"}],
         ["EnemyToKillFast", {x: 900, y: 910, asset: "enemies/red_car.png"}],
         ["Badge", {x: 450, y: 1800, asset: "badge.png"}],
@@ -48,7 +48,7 @@ require(objectFiles, function () {
         stage.loadAssets(enemyAssets);
 
         var timer2 = setInterval ( function(){
-            stage.loadAssets([ ["EnemyToKill", {x: 280, y: 910, asset: "enemies/wheel.png"}]])
+            stage.loadAssets([ ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}]])
         }, 4000 );
     });
 
@@ -150,7 +150,7 @@ require(objectFiles, function () {
         }, 1000 );
     });
 
-    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/bodyguard.png, enemies/wheel.png, badge.png, gold_star.png, coffee.png, 7thfloor-door.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
+    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/slider.png, badge.png, gold_star.png, coffee.png, 7thfloor-door.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
         Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});
         Q.stageScene("firstStreet");
         Q.stageScene("gameStats",1);
