@@ -26,19 +26,25 @@ require(objectFiles, function () {
     var enemyAssets = [
         ["EnemyToAvoid", {x: 1000, y: 2050, asset: "enemies/walker.png"}],
         ["EnemyToAvoid", {x: 500, y: 2050, asset: "enemies/walker.png"}],
+//        ["Badge", {x: 450, y: 1800, asset: "badge.png"}], //todo get rid of or assimilate functionality
         ["BadgeGuard", {x: 600, y: 1800, asset: "enemies/walker.png"}],
+
         ["VerticalEnemyToAvoid", {x: 800, y: 1950, asset: "enemies/flyer.png"}],
         ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}],
         ["EnemyToKill", {x: 490, y: 1190, asset: "enemies/moman.png"}],
-        ["VerticalEnemyToAvoid", {x: 1080, y: 1260, asset: "enemies/flyer.png"}],
+
+        ["VerticalEnemyToAvoid", {x: 1095, y: 1260, asset: "enemies/flyer.png"}],
         ["EnemyToKillFast", {x: 1100, y: 910, asset: "enemies/moman.png"}],
+
         ["EnemyToKillFast", {x: 700, y: 910, asset: "enemies/moman.png"}],
-        ["VerticalEnemyToAvoid", {x: 340, y: 350, asset: "enemies/flyer.png"}],
-        ["VerticalEnemyToAvoid", {x: 740, y: 350, asset: "enemies/flyer.png"}],
-//        ["Badge", {x: 450, y: 1800, asset: "badge.png"}], //todo get rid of or assimilate functionality
+        ["VerticalEnemyToAvoid", {x: 340, y: 350, asset: "enemies/flyer-right.png"}],
+        ["VerticalEnemyToAvoid", {x: 740, y: 350, asset: "enemies/flyer-right.png"}],
+
         ["Recommendation", {x: 455, y: 1890 , asset: "book.png"}],
         ["Recommendation", {x: 1100, y: 1600, asset: "book.png"}], //todo star and coffee one collectable, change name of 'reccomendation'
         ["Recommendation", {x: 1260, y: 1190, asset: "book.png"}], //todo get rid of or assimilate coffee (life++) which was here
+        ["Recommendation", {x: 840, y: 910, asset: "book.png"}],
+        ["Recommendation", {x: 560, y: 420, asset: "book.png"}],
         ["EndGame", {x: 105, y: 70, asset: "exit.png"}]
     ];
 
@@ -94,7 +100,7 @@ require(objectFiles, function () {
         }));
 
         stage.insert(new Q.UI.Button({
-            label: "You win!!! You scored " + Q.state.p.score + " and you found " + Q.state.p.recommendations + " books!",
+            label: "You win!!! Score: " + Q.state.p.score + " + " + Q.state.p.recommendations + " books = total score: " +  (Q.state.p.score + Q.state.p.recommendations * 500),
             color: 'yellow',
             y: 0,
             x: 0
@@ -151,11 +157,11 @@ require(objectFiles, function () {
 
         var timer = setInterval ( function(){
             Q.state.inc("time", 1);
-            Q.state.dec("score", 10);
+            Q.state.dec("score", 50);
         }, 1000 );
     });
 
-    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/slider.png, badge.png, book.png, exit.png, enemies/moman.png, enemies/blue_car.png", function() { //creating stage (layer)
+    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/flyer-right.png, enemies/slider.png, badge.png, book.png, exit.png, enemies/moman.png, enemies/blue_car.png", function() { //creating stage (layer)
         Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});
         Q.stageScene("firstStreet");
         Q.stageScene("gameStats",1);
