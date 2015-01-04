@@ -29,9 +29,14 @@ require(objectFiles, function () {
         ["BadgeGuard", {x: 600, y: 1800, asset: "enemies/walker.png"}],
         ["VerticalEnemyToAvoid", {x: 800, y: 1950, asset: "enemies/flyer.png"}],
         ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}],
-        ["EnemyToKill", {x: 500, y: 910, asset: "enemies/moman.png"}],
-        ["EnemyToKillFast", {x: 900, y: 910, asset: "enemies/moman.png"}],
+        ["EnemyToKill", {x: 490, y: 1190, asset: "enemies/moman.png"}],
+        ["VerticalEnemyToAvoid", {x: 1080, y: 1260, asset: "enemies/flyer.png"}],
+        ["EnemyToKillFast", {x: 1100, y: 910, asset: "enemies/moman.png"}],
+        ["EnemyToKillFast", {x: 700, y: 910, asset: "enemies/moman.png"}],
+        ["VerticalEnemyToAvoid", {x: 340, y: 350, asset: "enemies/flyer.png"}],
+        ["VerticalEnemyToAvoid", {x: 740, y: 350, asset: "enemies/flyer.png"}],
 //        ["Badge", {x: 450, y: 1800, asset: "badge.png"}], //todo get rid of or assimilate functionality
+        ["Recommendation", {x: 455, y: 1890 , asset: "book.png"}],
         ["Recommendation", {x: 1100, y: 1600, asset: "book.png"}], //todo star and coffee one collectable, change name of 'reccomendation'
         ["Recommendation", {x: 1260, y: 1190, asset: "book.png"}], //todo get rid of or assimilate coffee (life++) which was here
         ["EndGame", {x: 105, y: 70, asset: "exit.png"}]
@@ -181,6 +186,6 @@ require(objectFiles, function () {
 
     Q.state.on("change.recommendations", function() {
         var info_label = Q("UI.Text", 1).at(3);
-        info_label.p.label = "Keys: "+ Q.state.p.recommendations;
+        info_label.p.label = "Books: "+ Q.state.p.recommendations;
     });
 });

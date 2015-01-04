@@ -1,9 +1,10 @@
 require([], function () {
     Q.Sprite.extend("Player",{
         init: function(p) {
-          this._super(p, { asset: "nielek.png", x: 70, y: 1960, jumpSpeed: -540 ,timeInvincible: 1});
-//          this._super(p, { asset: "nielek.png", x: 560, y: 1260, jumpSpeed: -540 ,timeInvincible: 1}); // mid level test location
-//          this._super(p, { asset: "nielek.png", x: 400, y: 280, jumpSpeed: -540 ,timeInvincible: 1}); // end-game test location
+          this._super(p, { asset: "nielek.png", x: 105, y: 1750, jumpSpeed: -540 ,timeInvincible: 1});
+//          this._super(p, { asset: "nielek.png", x: 560, y: 1260, jumpSpeed: -540 ,timeInvincible: 1}); // 1st level test location
+//          this._super(p, { asset: "nielek.png", x: 770, y: 630, jumpSpeed: -540 ,timeInvincible: 1}); // 2nd level test location
+//          this._super(p, { asset: "nielek.png", x: 840, y: 350, jumpSpeed: -540 ,timeInvincible: 1}); // end-game test location
           this.add('2d, platformerControls');
         },
         step: function(dt) {
