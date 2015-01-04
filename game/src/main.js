@@ -30,7 +30,7 @@ require(objectFiles, function () {
         ["BadgeGuard", {x: 600, y: 1800, asset: "enemies/walker.png"}],
 
         ["VerticalEnemyToAvoid", {x: 800, y: 1950, asset: "enemies/flyer.png"}],
-        ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}],
+        ["EnemyToKill", {x: 280, y: 910, asset: "enemies/steve.png"}],
         ["EnemyToKill", {x: 490, y: 1190, asset: "enemies/moman.png"}],
 
         ["VerticalEnemyToAvoid", {x: 1095, y: 1260, asset: "enemies/flyer.png"}],
@@ -59,7 +59,7 @@ require(objectFiles, function () {
         stage.loadAssets(enemyAssets);
 
         var timer2 = setInterval ( function(){
-            stage.loadAssets([ ["EnemyToKill", {x: 280, y: 910, asset: "enemies/slider.png"}]])
+            stage.loadAssets([ ["EnemyToKill", {x: 280, y: 910, asset: "enemies/steve.png"}]])
         }, 4000 );
     });
 
@@ -100,7 +100,7 @@ require(objectFiles, function () {
         }));
 
         stage.insert(new Q.UI.Button({
-            label: "You win!!! Score: " + Q.state.p.score + " + " + Q.state.p.recommendations + " books = total score: " +  (Q.state.p.score + Q.state.p.recommendations * 500),
+            label: "You win!!! Score: " + Q.state.p.score + " + " + Q.state.p.lives + " lives + " + Q.state.p.recommendations + " books = " +  (Q.state.p.score + Q.state.p.recommendations * 500 + Q.state.p.lives * 1000),
             color: 'yellow',
             y: 0,
             x: 0
@@ -161,13 +161,13 @@ require(objectFiles, function () {
         }, 1000 );
     });
 
-    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/flyer-right.png, enemies/slider.png, badge.png, book.png, exit.png, enemies/moman.png, enemies/blue_car.png", function() { //creating stage (layer)
+    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/flyer-right.png, enemies/steve.png, badge.png, book.png, exit.png, enemies/moman.png, enemies/blue_car.png", function() { //creating stage (layer)
         Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});
         Q.stageScene("firstStreet");
         Q.stageScene("gameStats",1);
     });
 
-    Q.state.reset({ score: 5000, lives: 1 , recommendations: 0, time: 0});
+    Q.state.reset({ score: 5000, lives: 2 , recommendations: 0, time: 0});
 
     Q.state.on("change.score",function() {
         var score_label = Q("UI.Text",1).at(0);
