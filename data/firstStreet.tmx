@@ -3,7 +3,7 @@
  <tileset firstgid="1" name="tiles_map" tilewidth="70" tileheight="70">
   <image source="../images/tiles_map.png" width="700" height="350"/>
  </tileset>
- <layer name="background" width="20" height="33">
+ <layer name="background" width="20" height="33" visible="0">
   <data>
    <tile gid="9"/>
    <tile gid="9"/>
@@ -1040,7 +1040,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="5"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1215,10 +1215,10 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
    <tile gid="0"/>
+   <tile gid="5"/>
+   <tile gid="5"/>
+   <tile gid="5"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1235,7 +1235,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="5"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>

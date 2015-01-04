@@ -32,9 +32,9 @@ require(objectFiles, function () {
         ["EnemyToKill", {x: 500, y: 910, asset: "enemies/red_car.png"}],
         ["EnemyToKillFast", {x: 900, y: 910, asset: "enemies/red_car.png"}],
 //        ["Badge", {x: 450, y: 1800, asset: "badge.png"}], //todo get rid of or assimilate functionality
-        ["Recommendation", {x: 1100, y: 1600, asset: "key.png"}], //todo star and badge one collectable, change name 'reccomendation'
-        ["Coffee", {x: 1260, y: 1190, asset: "key.png"}], //todo star and badge one collectable
-        ["EndGame", {x: 70, y: 70, asset: "exit.png"}]
+        ["Recommendation", {x: 1100, y: 1600, asset: "book.png"}], //todo star and coffee one collectable, change name of 'reccomendation'
+        ["Recommendation", {x: 1260, y: 1190, asset: "book.png"}], //todo get rid of or assimilate coffee (life++) which was here
+        ["EndGame", {x: 105, y: 70, asset: "exit.png"}]
     ];
 
     Q.scene("firstStreet",function(stage) {
@@ -89,7 +89,7 @@ require(objectFiles, function () {
         }));
 
         stage.insert(new Q.UI.Button({
-            label: "You win!!! You scored " + Q.state.p.score,
+            label: "You win!!! You scored " + Q.state.p.score + " and you found " + Q.state.p.recommendations + " books!",
             color: 'yellow',
             y: 0,
             x: 0
@@ -106,7 +106,7 @@ require(objectFiles, function () {
         var statsContainer = stage.insert(new Q.UI.Container({
             fill: "gray",
             x: Q.width/2,
-            y: 10,
+            y: 15,
             border: 1,
             shadow: 3,
             shadowColor: "rgba(0,0,0,0.5)",
@@ -138,7 +138,7 @@ require(objectFiles, function () {
             }),statsContainer);
 
         var recs = stage.insert(new Q.UI.Text({
-                label: "Keys: " + Q.state.p.recommendations,
+                label: "Books: " + Q.state.p.recommendations,
                 color: "white",
                 x: -300,
                 y: 0
@@ -150,7 +150,7 @@ require(objectFiles, function () {
         }, 1000 );
     });
 
-    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/slider.png, badge.png, key.png, exit.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
+    Q.load("tiles_map.png, nielek.png, firstStreet.tmx, enemies/walker.png, enemies/flyer.png, enemies/slider.png, badge.png, book.png, exit.png, enemies/red_car.png, enemies/blue_car.png", function() { //creating stage (layer)
         Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});
         Q.stageScene("firstStreet");
         Q.stageScene("gameStats",1);
